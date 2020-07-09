@@ -1,6 +1,3 @@
 #Boris Bikes
 
-
-
-
-By Mark and Dillon.
+Week 1 Exercise

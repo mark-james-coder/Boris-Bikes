@@ -2,6 +2,7 @@ require 'docking_station.rb'
 require 'bike'
 
 describe DockingStation do
+
   it { is_expected.to respond_to :release_bike }
 
   it 'releases working bikes' do
@@ -30,8 +31,26 @@ describe DockingStation do
 
   it 'raises an error when dock bike if docking station contains a bike' do
     bike = Bike.new
-    DEFAULT_CAPACITY.times {subject.dock(bike)}
+    DockingStation::DEFAULT_CAPACITY.times {subject.dock(bike)}
     expect {subject.dock(bike)}.to raise_error 'Docking station full'
   end
 
+  it 'allows user to set docking station capacity' do
+    test_num = 25
+    station = DockingStation.new(test_num)
+    expect(station.capacity).to eq test_num
+  end
+
+  it 'sets default docking station default capacity' do
+    station = DockingStation.new
+    expect(station.capacity).to eq DockingStation::DEFAULT_CAPACITY
+  end
+
+  it 'does not release a broken bike' do
+    bike = Bike.new
+    bike.report_broken
+    station = DockingStation.new
+    station.dock(bike)
+    expect{station.release_bike}.to raise_error 'Bike is broken'
+  end
 end

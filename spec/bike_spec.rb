@@ -1,12 +1,10 @@
 require 'bike'
 
 describe Bike do
+  it { is_expected.to respond_to :condition }
 
-  it { is_expected.to respond_to :working? }
-
-  it 'can be reported broken' do
+  it 'can be reported as broken' do
     subject.report_broken
-    expect(subject).to be_broken
+    expect(subject.condition).to eq 'broken'
   end
-
 end

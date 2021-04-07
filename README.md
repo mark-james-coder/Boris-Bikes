@@ -10,7 +10,7 @@ Let's go back several years, to the days when there were no Boris Bikes. Imagine
 
 ## The Challenge
 
-This challenge was to be completed using pair programming and in a TDD manner, using doubles, mocks and mixins. I also completed the post-challenge User Story: ensuring docked objects are actually bikes.
+This challenge was to be completed using pair programming and in a TDD manner, using doubles, mocks and mixins. I also completed the post-challenge user story 'docking stations to ensure that returned entities are actually bikes'.
 
 ### User Stories
 ```

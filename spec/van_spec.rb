@@ -15,5 +15,8 @@ describe Van do
     garage.workshop << bike
     expect(subject.pickup_garage(garage)[0]).to eq bike
   end
+  it 'has a default capacity of 20' do
+    expect(subject.capacity).to eq 20
+  end
 
 end

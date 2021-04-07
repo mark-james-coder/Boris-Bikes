@@ -1,5 +1,6 @@
 require 'docking_station'
 require 'bike'
+require 'support/shared_examples_for_bike_container'
 
 describe DockingStation do
 
@@ -49,7 +50,7 @@ describe DockingStation do
   end
 
   it 'has a default capacity of 20' do
-    expect(subject.capacity).to eq DockingStation::DEFAULT_CAPACITY
+    expect(subject.capacity).to eq 20
   end
 
   describe 'initialization' do
@@ -76,5 +77,7 @@ describe DockingStation do
     subject.unload_repaired_bikes(van)
     expect(subject.bikes[0]).to eq bike
   end
+
+  it_behaves_like BikeContainer
 
 end

@@ -1,11 +1,16 @@
 require_relative 'docking_station'
 require_relative 'garage'
+require_relative 'bike_container'
 
 class Van
   attr_reader :load
+  attr_reader :capacity
 
-  def initialize
+  include BikeContainer
+
+  def initialize(capacity=DEFAULT_CAPACITY)
     @load = []
+    @capacity = capacity
   end
 
   def pickup_station(station)

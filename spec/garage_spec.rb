@@ -15,4 +15,7 @@ describe Garage do
     subject.repair_bikes
     expect(subject.workshop[0].condition).to eq 'working'
   end
+  it 'has a default capacity of 20' do
+    expect(subject.capacity).to eq 20
+  end
 end

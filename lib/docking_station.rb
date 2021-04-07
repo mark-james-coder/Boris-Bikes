@@ -22,10 +22,14 @@ class DockingStation
 
   def dock(bike)
     fail 'Docking station full' if full?
-    if bike.condition == 'working'
-      bikes << bike
+    if bike.respond_to?(:condition)
+      if bike.condition == 'working'
+        bikes << bike
+      else
+        broken_bikes << bike
+      end
     else
-      broken_bikes << bike
+      fail 'Only bikes can be docked'
     end
   end
 

@@ -77,6 +77,10 @@ describe DockingStation do
     subject.unload_repaired_bikes(van)
     expect(subject.bikes[0]).to eq bike
   end
+  it 'only docks bikes' do
+    dbl = double("Some Object")
+    expect{ subject.dock dbl }.to raise_error 'Only bikes can be docked'
+  end
 
   it_behaves_like BikeContainer
 

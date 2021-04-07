@@ -1,6 +1,6 @@
 # Boris Bikes
 
-### Technologies: Ruby, Rspec
+#### Technologies: Ruby, Rspec
 
 ## Makers Academy - Week 1 Pair Programming Project
 

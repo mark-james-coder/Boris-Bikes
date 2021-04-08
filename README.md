@@ -10,7 +10,16 @@ Let's go back several years, to the days when there were no Boris Bikes. Imagine
 
 ## The Challenge
 
-This challenge was to be completed using pair programming and in a TDD manner, using doubles, mocks and mixins. I also completed the post-challenge user story 'docking stations to ensure that returned entities are actually bikes'.
+This challenge was to be completed using pair programming and in a TDD manner, using doubles, mocks and mixins. I also completed the post-challenge user story 'docking stations to ensure that returned entities are actually bikes'. The code allows for:
+
+1 - Creation of a bike
+2 - Reporting a bike as broken
+3 - Docking of bikes at a docking station, ensuring that they are actually bikes and separating them into working and broken bikes.
+4 - Loading of broken bikes onto a van to be taken away for repair.
+5 - Unloading of broken bikes at a garage.
+6 - Repairing of bikes at the garage.
+7 - Loading of working bikes onto a van to be taken back to a docking station.
+8 - Unloading of working bikes at a docking station.
 
 ### User Stories
 ```

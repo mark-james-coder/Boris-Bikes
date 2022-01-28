@@ -10,9 +10,7 @@ Let's go back several years, to the days when there were no Boris Bikes. Imagine
 
 ## The Challenge
 
-I revisted this challenge and completed it again as a refresher. This time around, I am very happy to have been able to automate my feature tests - found in spec/feature_spec.rb. These tests output a story, whilst testing all the features of the code.
-
-The code allows for:
+This challenge was to be completed using pair programming and in a TDD manner, using doubles, mocks and mixins. I also completed the post-challenge user story 'docking stations to ensure that returned entities are actually bikes'. The code allows for:
 
 1 - Creation of a bike
 2 - Reporting a bike as broken
@@ -22,7 +20,6 @@ The code allows for:
 6 - Repairing of bikes at the garage.
 7 - Loading of working bikes onto a van to be taken back to a docking station.
 8 - Unloading of working bikes at a docking station.
-9 - The acceptance of storing of payment for hiring of bikes.
 
 ### User Stories
 ```
@@ -87,6 +84,6 @@ So that I can manage broken bikes and not disappoint users,
 I'd like vans to collect working bikes from garages and distribute them to docking stations.
 
 As a maintainer of the system,
-So that I can take payment for hiring bikes to the public,
-I'd like docking stations to accept and store payment.
+So that members of the public can get usable bikes,
+I'd like docking stations to ensure that returned entities are actually bikes
 ```
